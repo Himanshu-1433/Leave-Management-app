@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --backgroundColor: ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-area-background {
+    overflow-y: scroll;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(to bottom right, rgba(246, 188, 54, 0.798) 30%, rgb(255, 145, 0) 70%);
+    position: relative;
+    z-index: 0;
+}
+
+.fa-bell {
+    color: white;
+    font-size: 1.2em;
+}
+
+#navbar {
+    position: relative;
+    z-index: 2;
+}
+
+.user-icon {
+    margin-top: 12%;
+    width: 5em;
+    height: 5em;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 10px 10px rgb(170, 112, 4);
+}
+
+#main-card {
+    position: relative;
+    top: -10px;
+    z-index: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: transparent;
+}
+
+/* #main-card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    top: -180px;
+    height: 200px;
+    left: 26.4%;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, rgba(255, 166, 0, 0.709) 30%, rgba(255, 179, 0, 0.859) 70%);
+} */
+
+.card-subtitle {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.notice {
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+}
+
+hr.middel-line {
+    color: rgba(128, 128, 128, 0.694);
+}
+
+h6.date-notice {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.add-btn {
+    width: 40px;
+    height: 38px;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+.button-feature {
+    cursor: pointer;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(248, 242, 231);
+}
+
+.button-feature:active {
+    background-color: black;
+    color: white;
+}
+
+.button-feature:hover {
+    background-color: rgba(255, 68, 0, 0.871);
+    color: white;
+}
+
+.feature-img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+::placeholder {
+    font-size: 12px;
+    color: gray;
+    padding: 0px 5px;
+}
+
+.form-input {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0px;
+    margin: 1px 0px;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.confirm-leave {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    margin: 10px 0px 0px 0px; 
+    background: linear-gradient(to right, rgba(255, 157, 0, 0.97) 20%, rgba(255, 68, 0, 0.813) 70%);
+    border-radius: 20px;
+}
