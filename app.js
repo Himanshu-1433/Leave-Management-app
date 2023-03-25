@@ -65,6 +65,8 @@ add_btn.addEventListener("click", () => {
 })
 let confirm = document.getElementById("confirm-leave");
 confirm.addEventListener("click", function () {
+    $("#user-component").show();
+    $("#user-data").show();
     $(leave_invoice).slideToggle();
     $(confirmBtn).slideToggle();
     add_btn.style.transition = "all 1s";
