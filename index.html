@@ -31,63 +31,134 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="card-title" style="font-size: 1.1em; font-weight: 600;" id="emp-name">Dorothy
+                                <h6 class="card-title" style="font-size: 1.1em; font-weight: 600; transition: font 1s;"
+                                    id="emp-name">Dorothy
                                     Boone</h6>
-                                <h6 class="card-subtitle mb-2 text-muted" id="emp-desig">PHP Developer</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" style="transition: font 1s;" id="emp-desig">
+                                    PHP Developer</h6>
                             </div>
                             <div>
                                 <button class="add-btn" id="add-btn"><i class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>
-                        <div class="leave-invoice" id="leave-invoice">
-                            <div class="card-body">
-                                <div class="row">
-                                    <button class="col-6 button-feature"><img src="./assets/Annual.png" alt=""
-                                            class="feature-img"><br> Annual </button>
-                                    <button class="col-6 button-feature"><img src="./assets/parential.png" alt=""
-                                            class="feature-img"><br> Parential</button>
-                                    <button class="col-6 button-feature"><img src="./assets/unpaid.png" alt=""
-                                            class="feature-img"><br> Unpaid</button>
-                                    <button class="col-6 button-feature"><img src="./assets/special.png" alt=""
-                                            class="feature-img"><br> Special</button>
-                                </div>
-                                <div class="row form-noice">
-                                    <div>
-                                        <input type="text" placeholder="from" class="form-input" id="fromLeave">
-                                    </div>
-                                    <hr class="middel-line">
-                                    <div>
-                                        <input type="text" placeholder="to" class="form-input" id="toLeave">
-                                    </div>
-                                    <hr class="middel-line">
-                                    <div>
-                                        <input type="text" placeholder="Anotation" class="form-input" id="Anotation">
-                                    </div>
-                                    <hr class="middel-line">
-                                </div>
-                            </div>
-                        </div>
                         <hr class="middel-line">
-                        <div class="row date-time-notice">
-                            <div class="col-4 text-center">
-                                <span class="notice">Available</span>
-                                <br>
-                                <h6 class="date-notice">7 Days</h6>
-                            </div>
-                            <div class="col-4 text-center">
-                                <span class="notice">All</span>
-                                <br>
-                                <h6 class="date-notice">26 Days</h6>
-                            </div>
-                            <div class="col-4 text-center">
-                                <span class="notice">Used</span>
-                                <br>
-                                <h6 class="date-notice text-danger">19 Days</h6>
+                        <div class="row d-flex justify-content-center align-items-center position-relative">
+                            <div class="col-12">
+                                <div class="leave-invoice" id="leave-invoice">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <button class="col-6 button-feature"><img src="./assets/Annual.png" alt=""
+                                                    class="feature-img"><br> Annual </button>
+                                            <button class="col-6 button-feature"><img src="./assets/parential.png"
+                                                    alt="" class="feature-img"><br> Parential</button>
+                                            <button class="col-6 button-feature"><img src="./assets/unpaid.png" alt=""
+                                                    class="feature-img"><br> Unpaid</button>
+                                            <button class="col-6 button-feature"><img src="./assets/special.png" alt=""
+                                                    class="feature-img"><br> Special</button>
+                                        </div>
+                                        <div class="row form-noice">
+                                            <div>
+                                                <input type="text" placeholder="from" class="form-input" id="fromLeave"
+                                                    readonly>
+                                            </div>
+                                            <hr class="middel-line">
+                                            <div>
+                                                <input type="text" placeholder="to" class="form-input" id="toLeave"
+                                                    readonly>
+                                            </div>
+                                            <hr class="middel-line">
+                                            <div>
+                                                <input type="text" placeholder="Anotation" class="form-input"
+                                                    id="Anotation">
+                                            </div>
+                                            <hr class="middel-line">
+                                        </div>
+                                    </div>
+                                </div>
 
+
+                                <div class="row date-time-notice">
+                                    <div class="col-4 text-center">
+                                        <span class="notice">Available</span>
+                                        <br>
+                                        <h6 class="date-notice">7 Days</h6>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <span class="notice">All</span>
+                                        <br>
+                                        <h6 class="date-notice">26 Days</h6>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <span class="notice">Used</span>
+                                        <br>
+                                        <h6 class="date-notice text-danger">19 Days</h6>
+
+                                    </div>
+                                </div>
+
+                                <div class="confirmBtn">
+                                    <button class="confirm-leave" id="confirm-leave">Confirm</button>
+                                </div>
+                            </div>
+                            <div class="col-12 calender">
+                                <div class="my-3" id="calendar"></div>
+                                <div class="btn-of-save-cancel">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button class="btn-cal" id="btn-cancel">Cancel</button>
+                                        <button class="btn-cal" id="btn-save">Save</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="confirmBtn">
-                            <button class="confirm-leave" id="confirm-leave">Confirm</button>
+                    </div>
+                </div>
+            </section>
+            <section id="user-component">
+                <div class="d-flex align-items-center justify-content-center btn-group-track">
+                    <div class="track"></div>
+                    <div class="col">
+                        <button class="btn-admin-pan" id="btn-request">My Request</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn-admin-pan" id="btn-calender">Calendar</button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="user-profile d-flex flex-nowrap" style="overflow-x: scroll; width: 100%;">
+                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                        <div class=" user-detail">
+                            <h5 class="card-title user-name">Charles jorj</h5>
+                            <p class="card-subtitle sub-name">PHP Developer</p>
+                            <p class="card-text leave-date">Sep 24th to 26th</p>
+                        </div>
+                    </div>
+                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                        <div class=" user-detail">
+                            <h5 class="card-title user-name">Charles jorj</h5>
+                            <p class="card-subtitle sub-name">PHP Developer</p>
+                            <p class="card-text leave-date">Sep 24th to 26th</p>
+                        </div>
+                    </div>
+                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                        <div class=" user-detail">
+                            <h5 class="card-title user-name">Charles jorj</h5>
+                            <p class="card-subtitle sub-name">PHP Developer</p>
+                            <p class="card-text leave-date">Sep 24th to 26th</p>
+                        </div>
+                    </div>
+                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                        <div class=" user-detail">
+                            <h5 class="card-title user-name">Charles jorj</h5>
+                            <p class="card-subtitle sub-name">PHP Developer</p>
+                            <p class="card-text leave-date">Sep 24th to 26th</p>
                         </div>
                     </div>
                 </div>
@@ -95,12 +166,81 @@
         </main>
     </div>
 
+
+
+    <script src="./calender.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
+    <script>
+        new datedreamer.calendar({
+            element: "#calendar",
+            // select date on init
+            selectedDate: new Date().now,
+            // date format
+            format: "MM/DD/YYYY",
+            // custom next/prev icons
+            iconNext: '',
+            iconPrev: '',
+            // set the label of the date input
+            inputLabel: 'Set a date',
+            // set the placeholder of the date input
+            inputPlaceholder: 'Enter a date',
+            // hide the input and today button
+            hideInputs: false,
+            // enable dark mode
+            darkMode: false,
+            // or 'lite-purple'
+            theme: 'lite-purple',
+            // custom styles here
+            styles: `
+            
+      button {
+        color: black
+      }
+    `,
+            // callback
+            onChange: (e) => {
+                console.log(e.detail);
+            },
+            onRender: (e) => {
+                console.log(e.detail.calendar);
+            },
+        })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="./anime-master/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="./glide.js"></script>
     <script src="./jquery.min.js"></script>
     <script src="./app.js"></script>
+    <script src="./glide.setup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
+    <script>
+        let chartRef = document.getElementById("myChart").getContext("2d");
+        new Chart("chartRef", {
+            type: 'bar',
+            data: {
+                labels: ["11th", "12th", "13th", "14th", "15th", "16th", "17th"],
+                datasets: [{
+                    label: 'leave',
+                    data: [
+                        10000,
+                        20000,
+                        30000,
+                        40000,
+                        50000,
+                        60000,
+                        70000
+                    ],
+                    backgroundColor: "red"
+                }],
+            }
+        });
+
+
+    </script>
+
 </body>
 
 </html>
