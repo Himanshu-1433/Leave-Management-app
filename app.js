@@ -7,13 +7,13 @@ let click = 1;
 $(document).ready(() => {
     $(leave_invoice).hide();
     $(confirmBtn).hide();
-
-
 });
 add_btn.addEventListener("click", () => {
     setPosition(0, 1000);
     $(leave_invoice).slideToggle();
     $(confirmBtn).slideToggle();
+    $("#user-component").slideToggle();
+    $("#user-data").slideToggle();
     if (click == 0) {
         add_btn.style.transition = "all 1s";
         add_btn.style.transform = "rotate(90deg)";
