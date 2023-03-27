@@ -1,16 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root {
-    --backgroundColor: ;
-}
-
 * {
     margin: 0px;
     padding: 0px;
     font-family: 'Inter', sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    width: 0px;
+    background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
 .main-area-background {
+    overflow-x: hidden;
     overflow-y: scroll;
     height: 100vh;
     background-repeat: no-repeat;
@@ -177,15 +196,11 @@ h6.date-notice {
 }
 
 .cal {
-    display: block;
-    top: 0px;
     position: absolute;
-    left: 1000px;
+    top: 0px;
+    left: 2000px;
 }
 
-#calendar {
-    margin: 3%;
-}
 
 .btn-cal {
     width: 100%;
@@ -289,8 +304,19 @@ canvas#leave-manage-chart {
     color: white;
 }
 
+.box {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 23em;
+}
+
+.jqyc-change-year.btn-arrow {
+    background: orange;
+    color: white;
+}
+
 .leave-date {
     color: white;
     font-size: 0.7em;
 }
-

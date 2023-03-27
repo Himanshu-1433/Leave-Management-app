@@ -152,5 +152,7 @@ btn_calender.addEventListener("click", () => {
     btn_calender.style.color = "black";
     console.log(" 2 ");
     let sc = screen.width;
-    buttonTrackPosition((sc / 2) - 30)
+    buttonTrackPosition((sc / 2) - 29)
 });
+
+// calendar

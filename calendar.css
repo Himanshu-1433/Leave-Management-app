@@ -1,16 +1,11 @@
-/**
- * jQuery  Bootstrap year calendar 1.0.0
- * Copyright 2018, Allset
- * Licensed under the MIT license.
-
- * @author Piotr Zatorski
- */
 .jqyc {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
-.jqyc-months .table td, .jqyc-months .table th {
+.jqyc-months .table td,
+.jqyc-months .table th {
     border-top: 0px;
     text-align: center;
 }
@@ -35,7 +30,7 @@
     margin-bottom: 1rem;
 }
 
-.jqyc-appended{
+.jqyc-appended {
     background-color: #f6f7f8;
 }
 
@@ -52,8 +47,8 @@
 }
 
 
-.jqyc-range-choosen-between{
-    background-color: #157EFB;
-    color: #FFF;
+.jqyc-range-choosen-between {
+    background: #157EFB;
+    color: red;
     border-radius: 0.25rem;
 }

@@ -1,15 +1,8 @@
-/**
- * jQuery  Bootstrap year calendar 1.0.0
- * Copyright 2018, Allset
- * Licensed under the MIT license.
 
- * @author Piotr Zatorski
- */
 (function ($) {
 
     var methods = {
         init: function (options) {
-
         },
         destroy: function () {
             this.empty();
@@ -38,9 +31,7 @@
             ).addClass('jqyc-appended').append(' <span class="' + classes + '">' + text + '</span>');
             recalcHeight();
         },
-        addRange: function(startYear, startMonth, startDay, endYear, endMonth, endDay){
-
-
+        addRange: function (startYear, startMonth, startDay, endYear, endMonth, endDay) {
             $('.jqyc-range-choosen-between').removeClass('jqyc-range-choosen-between');
             $calendar.data('rangepicker-end-day-of-month', false);
             $calendar.data('rangepicker-end-month', false);
@@ -262,9 +253,9 @@
             colColXs3 = 'col-xs-3';
             colColXs4 = 'col-xs-4';
         } else {
-            colColXs2 = 'col';
-            colColXs3 = 'col';
-            colColXs4 = 'col';
+            colColXs2 = 'col-4';
+            colColXs3 = 'col-4';
+            colColXs4 = 'col-4';
         }
 
 
@@ -283,14 +274,12 @@
         }
 
         var domSkeleton = '<div class="jqyc" ><div class="jqyc-year-chooser border-top border-bottom row align-items-center" data-current-year="' + year + '">' +
-            '<div class="' + colColXs2 + ' text-left">' +
-            '   <button type="button" class="btn btn-primary btn-sm jqyc-prev-year jqyc-change-year" data-year="' + (year - 1) + '">&larr;</button>' +
+            '<div class="' + colColXs2 + ' text-center">' +
+            '   <button type="button" class="btn btn-sm jqyc-prev-year jqyc-change-year btn-arrow" data-year="' + (year - 1) + '"><i class="fa-solid fa-arrow-left"></i></button>' +
             '</div>' +
-            '<div class="' + colColXs2 + ' text-center text-muted"><small>' + (year - 1) + '</small></div>' +
             '<div class="jqyc-year ' + colColXs4 + '">' + year + '</div>' +
-            '<div class="' + colColXs2 + ' text-center text-muted"><small>' + (year + 1) + '</small></div>' +
-            '<div class="' + colColXs2 + ' text-right">' +
-            '   <button type="button" class="btn btn-primary btn-sm jqyc-next-year jqyc-change-year" data-year="' + (year) + '">&rarr;</button>' +
+            '<div class="' + colColXs2 + ' text-center">' +
+            '   <button type="button" class="btn btn-sm jqyc-next-year jqyc-change-year btn-arrow" data-year="' + (year) + '"><i class="fa-solid fa-arrow-right"></i></button>' +
             '</div>' +
             '</div>' +
             '<div class="jqyc-months mt-4">' +
@@ -618,3 +607,13 @@
 
 }(jQuery));
 
+
+
+
+
+$(document).ready(() => {
+    $('.calendar').calendar({
+        mode: 'rangepicker'
+    });
+    $('.calendar').calendar('addRange', 2019, 3, 4, 2019, 3, 7);
+})

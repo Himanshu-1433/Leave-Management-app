@@ -6,32 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- For calendar Start -->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Javascripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <!-- Project Files -->
-    <link rel="stylesheet" href="./jquery.bootstrap.year.calendar.css">
-    <script src="./jquery.bootstrap.year.calendar.js"></script>
-
-
     <!-- Calendar over -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>
         Leave Management App
     </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
 </head>
+
 
 <body>
     <div class="container main-area-background">
@@ -120,7 +107,9 @@
                                 </div>
                             </div>
                             <div class="col-12 cal">
-                                <div class="calendar"></div>
+                                <div class="box">
+                                    <div class="calendar"></div>
+                                </div>
                                 <!-- calendar are hear -->
                                 <div class="btn-of-save-cancel">
                                     <div class="d-flex justify-content-center align-items-center">
@@ -145,10 +134,11 @@
                 </div>
             </section>
             <section id="user-data">
-                <div class="chart">
-                    <canvas id="myChart"></canvas>
+                <div class="chart my-3" style="overflow-y: hidden; overflow-x: scroll;">
+                    <canvas id="myChart" style="width: 100vw; height: 55vh;"></canvas>
                 </div>
-                <div class="user-profile d-flex flex-nowrap" style="overflow-x: scroll; width: 100%;">
+                <div class="user-profile d-flex flex-nowrap"
+                    style="overflow-x: scroll; width: 100%; position: relative; bottom: 10px;">
                     <div class="box-user mx-2 d-flex" data-glide-el="track">
                         <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon"
                                 class="user-profile-img"></div>
@@ -189,19 +179,14 @@
             </section>
         </main>
     </div>
+    <!-- 
+    <div class="container">
+        <div class="calendar"></div>
+    </div> -->
 
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="./jquery.min.js"></script>
-    <script src="./app.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <!-- <script>
-        let chartRef = document.getElementById("myChart").getContext("2d");
-        new Chart("chartRef", {
+    <script>
+        // let chartRef = document.getElementById("myChart").getContext("2d");
+        new Chart("myChart", {
             type: 'bar',
             data: {
                 labels: ["11th", "12th", "13th", "14th", "15th", "16th", "17th"],
@@ -216,22 +201,20 @@
                         60000,
                         70000
                     ],
-                    backgroundColor: "red"
+                    backgroundColor: "rgba(255, 157, 0, 0.97)"
                 }],
             }
         });
-
-
-    </script> -->
-
-    <!-- calendar are integrated -->
-    <script>
-        $('.calendar').calendar({
-            mode: 'rangepicker'
-        });
-        $('.calendar').calendar('addRange', 2019, 3, 4, 2019, 3, 7);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./app.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 
+    <script src="./calendar.js"></script>
 </body>
 
 </html>
