@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For calendar Start -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Project Files -->
+    <link rel="stylesheet" href="./jquery.bootstrap.year.calendar.css">
+    <script src="./jquery.bootstrap.year.calendar.js"></script>
+
+
+    <!-- Calendar over -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -100,8 +119,9 @@
                                     <button class="confirm-leave" id="confirm-leave">Confirm</button>
                                 </div>
                             </div>
-                            <div class="col-12 calender">
-                                <div class="my-3" id="calendar"></div>
+                            <div class="col-12 cal">
+                                <div class="calendar"></div>
+                                <!-- calendar are hear -->
                                 <div class="btn-of-save-cancel">
                                     <div class="d-flex justify-content-center align-items-center">
                                         <button class="btn-cal" id="btn-cancel">Cancel</button>
@@ -129,32 +149,36 @@
                     <canvas id="myChart"></canvas>
                 </div>
                 <div class="user-profile d-flex flex-nowrap" style="overflow-x: scroll; width: 100%;">
-                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
-                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                    <div class="box-user mx-2 d-flex" data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon"
+                                class="user-profile-img"></div>
                         <div class=" user-detail">
                             <h5 class="card-title user-name">Charles jorj</h5>
                             <p class="card-subtitle sub-name">PHP Developer</p>
                             <p class="card-text leave-date">Sep 24th to 26th</p>
                         </div>
                     </div>
-                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
-                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                    <div class="box-user mx-2 d-flex" data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon"
+                                class="user-profile-img"></div>
                         <div class=" user-detail">
                             <h5 class="card-title user-name">Charles jorj</h5>
                             <p class="card-subtitle sub-name">PHP Developer</p>
                             <p class="card-text leave-date">Sep 24th to 26th</p>
                         </div>
                     </div>
-                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
-                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                    <div class="box-user mx-2 d-flex" data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon"
+                                class="user-profile-img"></div>
                         <div class=" user-detail">
                             <h5 class="card-title user-name">Charles jorj</h5>
                             <p class="card-subtitle sub-name">PHP Developer</p>
                             <p class="card-text leave-date">Sep 24th to 26th</p>
                         </div>
                     </div>
-                    <div class="box-user mx-2 d-flex"  data-glide-el="track">
-                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon" class="user-profile-img"></div>
+                    <div class="box-user mx-2 d-flex" data-glide-el="track">
+                        <div class="user-img"><img src="./assets/user-icon.png" alt="user-icon"
+                                class="user-profile-img"></div>
                         <div class=" user-detail">
                             <h5 class="card-title user-name">Charles jorj</h5>
                             <p class="card-subtitle sub-name">PHP Developer</p>
@@ -167,56 +191,15 @@
     </div>
 
 
-
-    <script src="./calender.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
-    <script>
-        new datedreamer.calendar({
-            element: "#calendar",
-            // select date on init
-            selectedDate: new Date().now,
-            // date format
-            format: "MM/DD/YYYY",
-            // custom next/prev icons
-            iconNext: '',
-            iconPrev: '',
-            // set the label of the date input
-            inputLabel: 'Set a date',
-            // set the placeholder of the date input
-            inputPlaceholder: 'Enter a date',
-            // hide the input and today button
-            hideInputs: false,
-            // enable dark mode
-            darkMode: false,
-            // or 'lite-purple'
-            theme: 'lite-purple',
-            // custom styles here
-            styles: `
-            
-      button {
-        color: black
-      }
-    `,
-            // callback
-            onChange: (e) => {
-                console.log(e.detail);
-            },
-            onRender: (e) => {
-                console.log(e.detail.calendar);
-            },
-        })
-    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="./glide.js"></script>
     <script src="./jquery.min.js"></script>
     <script src="./app.js"></script>
-    <script src="./glide.setup.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
-    <script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script>
         let chartRef = document.getElementById("myChart").getContext("2d");
         new Chart("chartRef", {
             type: 'bar',
@@ -239,6 +222,14 @@
         });
 
 
+    </script> -->
+
+    <!-- calendar are integrated -->
+    <script>
+        $('.calendar').calendar({
+            mode: 'rangepicker'
+        });
+        $('.calendar').calendar('addRange', 2019, 3, 4, 2019, 3, 7);
     </script>
 
 </body>

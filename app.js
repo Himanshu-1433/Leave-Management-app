@@ -112,7 +112,7 @@ function setPosition(pos1, pos2) {
         delay: 300,
     });
     anime({
-        targets: '.calender',
+        targets: '.cal',
         left: pos2,
         delay: 300,
     });
@@ -154,11 +154,3 @@ btn_calender.addEventListener("click", () => {
     let sc = screen.width;
     buttonTrackPosition((sc / 2) - 30)
 });
-
-var glideMulti = new Glide('.box-user', {
-    type: 'slider',
-    autoplay: 4000,
-    focusAt: 'center',
-    perView: 2
-});
-glideMulti.mount();

@@ -176,7 +176,7 @@ h6.date-notice {
     transform: scale(0.90);
 }
 
-.calender {
+.cal {
     display: block;
     top: 0px;
     position: absolute;
@@ -293,3 +293,4 @@ canvas#leave-manage-chart {
     color: white;
     font-size: 0.7em;
 }
+
