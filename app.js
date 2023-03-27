@@ -128,7 +128,7 @@ btn_save.addEventListener("click", () => {
 });
 
 btn_cancel.addEventListener("click", () => {
-    setPosition(0, 1000);
+    setPosition(0, 1000); 
 });
 
 function buttonTrackPosition(pos) {
