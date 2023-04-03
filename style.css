@@ -27,6 +27,21 @@
     background: transparent;
 }
 
+.menu_buttons {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu_buttons img {
+    width: 24px;
+}
+.menu_buttons i {
+    font-size: 20px;
+}
 
 .main-area-background {
     overflow-x: hidden;
@@ -34,9 +49,14 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(to bottom right, rgba(246, 188, 54, 0.798) 30%, rgb(255, 145, 0) 70%);
+    background: linear-gradient(0deg, rgba(255,132,0,1) 0%, rgba(255,202,40,1) 100%);
     position: relative;
     z-index: 0;
+    padding: 20px 15px !important;
+}
+
+.main-area-background main {
+    margin-top: -60px;
 }
 
 .fa-bell {
@@ -49,37 +69,81 @@
     z-index: 2;
 }
 
-.user-icon {
-    margin-top: 12%;
-    width: 5em;
-    height: 5em;
-    border: none;
-    border-radius: 50%;
+.profile_iamge {
+    width: 75px;
+    height: 75px;
+    border-radius: 190%;
     object-fit: cover;
-    box-shadow: 0px 12px 10px rgb(170, 112, 4);
+    display: block;
+    margin: 0px auto 5px;
+    box-shadow: 0px 10px 20px rgb(170, 112, 4);
+    position: relative;
+    z-index: 11;
+}
+
+.shaped_curv {
+    -webkit-mask-image: url(./assets/shape.png);
+    -webkit-mask-size: 80vw 280px;
+    -webkit-mask-position: center top -20px;
+    -webkit-mask-repeat: repeat-x;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+@media(max-width: 767px) {
+    .shaped_curv {
+        -webkit-mask-size: 600px 280px;
+        -webkit-mask-position: center top -20px;
+    }
 }
 
 #main-card {
     position: relative;
     top: -15px;
     z-index: 0;
-    border-radius: 20px;
-    overflow: hidden;
     border: transparent;
+    background-color: transparent;
 }
 
-#main-card::after {
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 150px;
-    top: -185px;
-    height: 200px;
-    left: 26.4%;
-    border-radius: 50%;
-    background: linear-gradient(to bottom right, rgba(255, 166, 0, 0.709) 30%, rgba(255, 179, 0, 0.859) 70%);
+#main-card.animate_card {
+    -webkit-animation-name: scale_card;
+    -webkit-animation-duration: 0.5s;
+    animation-name: scale_card;
+    animation-duration: 0.5s;
+}
+
+@keyframes scale_card {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes scale_card {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+#main-card .card-body {
+    background-color: #ffffff;
+    margin: -2px 0px 0px;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
 }
 
 .card-subtitle {
@@ -105,7 +169,7 @@ h6.date-notice {
 
 .add-btn {
     width: 40px;
-    height: 38px;
+    height: 40px;
     text-align: center;
     padding: 10px;
     font-size: 10px;
@@ -179,13 +243,13 @@ h6.date-notice {
 
 .confirmBtn {
     position: relative;
-    transform: scale(0);
+    /* transform: scale(0); */
     left: 0px;
 }
 
 .leave-invoice {
     position: relative;
-    transform: scale(0);
+    /* transform: scale(0); */
     left: 0px;
 }
 
@@ -194,29 +258,25 @@ h6.date-notice {
     left: 0px;
 }
 
-.card {
-    transform: scale(0.90);
-}
-
 .cal {
     position: absolute;
     top: 0px;
-    left: 2000px;
+    left: 120%;
 }
 
 
 .btn-cal {
-    width: 100%;
+    width: calc(50% - 10px);
     padding: 15px;
     border: none;
     outline: none;
     color: white;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 0px 0px;
     border-radius: 20px;
 }
 
 #btn-cancel {
-
+    
     background: linear-gradient(to right, rgba(203, 201, 201, 0.97) 20%, rgba(224, 224, 224, 0.813) 70%);
     color: black;
     transition: 1s;
@@ -228,14 +288,18 @@ h6.date-notice {
 }
 
 .btn-group-track {
-    margin: 0% 6%;
     position: relative;
     z-index: -1;
-    padding: 1%;
+    padding: 25px 0px;
     width: auto;
-    border-radius: 13px;
-    background: rgba(245, 121, 5, 0.557);
+    border-radius: 12px;
+    background: rgba(245, 121, 5, 0.5);
     text-align: center;
+    overflow: hidden;
+}
+
+.btn-group-track > .col {
+    position: relative;
 }
 
 #user-component {
@@ -246,21 +310,30 @@ h6.date-notice {
 .track {
     background-color: white;
     position: absolute;
-    left: 2px;
-    border-radius: 13px;
+    border-radius: 10px;
     z-index: -1;
-    width: calc(100% / 2.05);
-    height: calc(100% - 7%);
+    width: calc((100% / 2) - 3px);
+    height: calc(100% - 6px);
+    left: 3px;
 }
 
 
 .btn-group-track .col button {
     border: none;
     background: transparent;
-    font-size: 0.8em;
+    font-size: 12px;
     text-align: center;
-    padding: 1px;
-    transition: all 0.27s;
+    transition: all 0.4s;
+    position: absolute;
+    padding: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-group-track .col:nth-child(3) button {
@@ -311,7 +384,7 @@ canvas#leave-manage-chart {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 23em;
+    height: 24em;
 }
 
 .jqyc-change-year.btn-arrow {
@@ -344,3 +417,118 @@ canvas#leave-manage-chart {
     background: rgb(255 255 255 / 28%);
     color: white;
 }
+
+
+
+.timeline_box {
+    display: flex;
+    width: 100%;
+}
+
+span.leave-bar-1 {
+    top: 20px;
+    margin: 5px 0px;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    width: 70px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(255 255 255 / 50%) 10%, rgb(255 255 255 / 75%));
+}
+span.leave-bar-2 {
+    top: 40px;
+    margin: 5px 0px;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(255 255 255 / 50%) 10%, rgb(255 255 255 / 75%));
+}        
+span.leave-bar-3 {
+    top: 60px;
+    margin: 5px 0px;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    width: 70px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(255 255 255 / 50%) 10%, rgb(255 255 255 / 75%));
+}        
+span.leave-bar-4 {
+    top: 80px;
+    margin: 5px 0px;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(255 255 255 / 50%) 10%, rgb(255 255 255 / 75%));
+}        
+span.leave-bar-5 {
+    top: 100px;
+    margin: 5px 0px;
+    height: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    width: 210px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(255 255 255 / 50%) 10%, rgb(255 255 255 / 75%));
+}        
+
+.piller {
+    position: relative;
+    background-color: transparent;
+    flex: 0 0 70px;
+    max-width: 70px;
+}
+
+.piller .dots-set .piller-dots {
+    font-size: 8px;
+    opacity: 0.6;
+    line-height: 30px;
+}
+
+.piller .dots-set .piller-dots:last-child {
+    font-size: 12px;
+    opacity: 1;
+}
+
+.piller:nth-child(7) .dots-set {
+    width: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: linear-gradient(0deg, rgba(255,202,40,0.65) 0%, rgba(255,202,40,0.1) 100%);
+}
+
+.piller,
+.dots-set {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* calendar css start */
+.jqyc-year-chooser {
+    display: none !important;
+}
+.calendar .jqyc-months {
+    margin: 0px 0px 20px !important;
+}
+.jqyc-months .table td {
+    vertical-align: middle;
+    height: calc((100vw - 86px) / 7);
+    width: calc((100vw - 86px) / 7);
+}
+.jqyc-months table, .jqyc-months th, .jqyc-months td {
+    border: none !important;
+}
+/* calendar css end */

@@ -12,9 +12,9 @@
 
 .jqyc-not-empty-td:hover {
     cursor: pointer;
-    background-color: #157EFB;
+    background: linear-gradient(0deg, rgba(255, 68, 0, 0.813) 20%, rgba(255, 157, 0, 0.97) 70%);
     color: #FFF;
-    border-radius: 0.25rem;
+    border-radius: 50%;
 }
 
 .jqyc-not-empty-td:hover .text-danger {
@@ -41,14 +41,14 @@
 }
 
 .jqyc-end-day-of-month {
-    background-color: #157EFB;
+    background: linear-gradient(0deg, rgba(255, 68, 0, 0.813) 20%, rgba(255, 157, 0, 0.97) 70%);
     color: #FFF;
-    border-radius: 0.25rem;
+    border-radius: 50%;
 }
 
 
 .jqyc-range-choosen-between {
-    background: #157EFB;
-    color: red;
-    border-radius: 0.25rem;
+    background: linear-gradient(0deg, rgba(255, 68, 0, 0.813) 20%, rgba(255, 157, 0, 0.97) 70%);
+    color: #FFF;
+    border-radius: 50%;
 }

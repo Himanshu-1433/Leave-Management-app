@@ -21,19 +21,21 @@
 
 
 <body>
-    <div class="container main-area-background">
+    <div class="container-fluid main-area-background">
         <nav>
             <div class="row" id="navbar">
                 <div class="col-12 d-flex align-items-center justify-content-between">
-                    <a href="#"><img src="./assets/icons-grid.png" class="img m-3" alt="grid-icon"></a>
-                    <a href="#"><img src="./assets/user-icon.png" class="user-icon" alt=""></a>
-                    <a href="#"><i class="fa-solid fa-bell m-3"></i></a>
+                    <a href="#" class="menu_buttons"><img src="./assets/icons-grid.png" class="img" alt="grid-icon"></a>
+                    <a href="#" class="menu_buttons"><i class="fa-solid fa-bell"></i></a>
                 </div>
             </div>
         </nav>
         <main>
             <section>
-                <div class="card p-1" id="main-card">
+                <img src="./assets/user-icon.png" alt="profile image" class="profile_iamge">
+                <div class="card" id="main-card">
+                    <div class="shaped_curv" style="height: 25px;">
+                    </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
@@ -50,7 +52,7 @@
                         <hr class="middel-line">
                         <div class="row d-flex justify-content-center align-items-center position-relative">
                             <div class="col-12">
-                                <div class="leave-invoice" id="leave-invoice">
+                                <div class="leave-invoice" id="leave-invoice" style="display: none;">
                                     <div class="card-body">
                                         <div class="row">
                                             <button class="col-6 button-feature"><img src="./assets/Annual.png" alt=""
@@ -102,7 +104,7 @@
                                     </div>
                                 </div>
 
-                                <div class="confirmBtn">
+                                <div class="confirmBtn" style="display: none;">
                                     <button class="confirm-leave" id="confirm-leave">Confirm</button>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@
                                 </div>
                                 <!-- calendar are hear -->
                                 <div class="btn-of-save-cancel">
-                                    <div class="d-flex justify-content-center align-items-center">
+                                    <div class="d-flex justify-content-between">
                                         <button class="btn-cal" id="btn-cancel">Cancel</button>
                                         <button class="btn-cal" id="btn-save">Save</button>
                                     </div>
@@ -134,17 +136,234 @@
                 </div>
             </section>
             <section id="user-data">
-                <div class="month-detail my-2 mx-4 d-flex justify-content-between align-items-center">
-
-                    <h2 id="month" class="my-1">September</h2>
-
+                <div class="month-detail py-3 d-flex justify-content-between align-items-center">
+                    <h2 class="m-0" id="month">September</h2>
                     <div class="change-month">
                         <button class="btn-left-angle"><i class="fa-solid fa-angle-left"></i></button>
                         <button class="btn-right-angle"><i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
-                <div class="chart my-3" style="overflow-y: hidden; overflow-x: scroll;">
-                    <canvas id="myChart" style="width: 100vw; height: 55vh;"></canvas>
+                <div class="chart" style="overflow-y: hidden; overflow-x: scroll;">
+                    <div class="timeline_box">
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>1th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>2th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <span class="leave-bar-1"></span>
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>3th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>4th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <span class="leave-bar-3"></span>
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>5th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <span class="leave-bar-2"></span>
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>6th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <span class="leave-bar-4"></span>
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>7th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>8th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>9th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <span class="leave-bar-5"></span>
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>10th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>11th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>12th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>13th</p>
+                            </div>
+                        </div>
+                        <div class="piller">
+                            <div class="dots-set">
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                                <span class="piller-dots">•</span>
+                            </div>
+                            <div class="date">
+                                <p>14th</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="user-profile d-flex flex-nowrap"
                     style="overflow-x: scroll; width: 100%; position: relative; bottom: 10px;">
